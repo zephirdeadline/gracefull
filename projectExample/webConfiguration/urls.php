@@ -3,8 +3,11 @@
   here setup your url path  
 */
   class gUrlSetting{
-    public $urls = array(
-        '/note' => "noteIndex", //name of the view function
-         );
+    public static $urls = array(
+        '/projectExample/note/' => "module_note.noteIndex", //name of the view function
+    );
   }
+
+
+
 ?>
