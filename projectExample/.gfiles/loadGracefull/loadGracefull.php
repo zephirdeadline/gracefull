@@ -1,9 +1,10 @@
 <?php
-    session_start();
-    if ($_SESSION['debug'])
-    {
-        require_once($_SESSION['pathProject']."/.gfile/.debug/ModelPanelDebug.php");
-        $panelDebug = new ModelPanelDebug();
-        $panelDebug->printrDebug();
-    }
+    //session_start();
+function debugPanel()
+{
+        
+        require_once("./.gfiles/.debug/ModelPanelDebug.php");
+        $panelDebug = new PanelDebug($_SESSION, $_SERVER);
+        $panelDebug->dumpDebug();
+}
 ?>

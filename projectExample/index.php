@@ -25,9 +25,9 @@
     }
     else
     {
-        echo $_SERVER['REQUEST_URI'];
-
-        echo 'url not found';
+        echo $_SERVER['REQUEST_URI']."<br>";
+        var_dump(gUrlSetting::$urls);
+        echo '<br>url not found';
     }
 
 ?>
