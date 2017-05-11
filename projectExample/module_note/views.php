@@ -4,7 +4,7 @@
     function noteIndex()
     {
         //Load and parse a file.
-        render("module_note.index.php");
+        render("module_note.index.php", "something");
 
     }
 

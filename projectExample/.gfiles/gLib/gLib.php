@@ -25,8 +25,8 @@ function keyExists($array, $key)
 }
 function render($templateName, $tabArgs)
 {
-    $names = explode(".", $templateName)
-    require_once("./".$name[0]."/templates/".$name[1]);
+    $names = explode(".", $templateName);
+    require_once("./".$names[0]."/templates/".$names[1].".php");
     //echo "coucou de render";
 }
 ?>
