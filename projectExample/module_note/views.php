@@ -17,7 +17,9 @@
         $args = array(); //list of var for the view
         $args['title'] = "Test ARG TAB";
         $args['desc'] = "Victory for args";
-        $args['hello'] = array('h' => 5, );;
+        $args['array'] = array('a' => 'a',
+        'b' => 'b',
+        'c' => 'c' );
         render("module_note.list.html", $args);
 
     }

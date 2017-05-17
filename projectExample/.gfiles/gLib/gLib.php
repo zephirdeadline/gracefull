@@ -78,12 +78,13 @@ function render($templateName, $tabArgs)
                 $i+=$j;
                 
             }
-            else if (preg_match("#\{\{ for (?P<content>[a-zA-Z0-9_]+) in (?P<tab>[0-9]+) \}\}.*#", $line, $matches))
+            else if (preg_match("#\{\{ for (?P<content>[a-zA-Z0-9_]+) in (?P<tab>[a-zA-Z0-9]+) \}\}.*#", $line, $matches))
             {
                 $j = 1;
                 for ($n = 0; $n < count($tabArgs[$matches['tab']]); $n++)
                 {
                     $j = 1;
+                    $tabArgs[$matches['content']] = array_values($tabArgs[$matches['tab']])[$n];
                     while (!preg_match("#\{\{ endfor \}\}#", $arrayOfLine[$i+$j])) {
                         echo replaceVar($arrayOfLine[$i+$j], $tabArgs);
                         $j++;
