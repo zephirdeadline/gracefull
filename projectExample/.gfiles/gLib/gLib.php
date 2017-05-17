@@ -50,7 +50,7 @@ function render($templateName, $tabArgs)
             {
                 
                 $j = 1;
-                for ($n = $matches['content']; $n < $matches['num']; $n++)
+                for ($n = $matches['content']; $n < $matches['num']+1; $n++)
                 {
                     $tabArgs[$matches['name']] = $n;
                     $j = 1;
@@ -66,7 +66,7 @@ function render($templateName, $tabArgs)
             else if (preg_match("#\{\{ for (?P<content>[a-zA-Z0-9_]+) in (?P<num>[0-9]+) \}\}.*#", $line, $matches))
             {
                 $j = 1;
-                for ($n = 0; $n < $matches['num']; $n++)
+                for ($n = 0; $n < $matches['num']+1; $n++)
                 {
                     $j = 1;
                     while (!preg_match("#\{\{ endfor \}\}#", $arrayOfLine[$i+$j])) {
@@ -100,7 +100,7 @@ function render($templateName, $tabArgs)
      }
     }
     else
-        echo 'notemplate found';
+        echo 'Template not found';
 
       //require_once("./".$names[0]."/templates/".$names[1].".php");
     //echo "coucou de render";

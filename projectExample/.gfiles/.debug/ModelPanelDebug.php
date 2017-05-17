@@ -2,19 +2,19 @@
  class PanelDebug{
    // private $path = getcwd();
 
-    private $session;
-    private $server;
+   /* private $session = array();
+    private $server = array();
     private $file = __FILE__;
     private $panelDebug;
     function __construct($session, $server)
     {
-        $this->$session = $session;
-        $this->$server = $server;
-        $panelDebug = array(
-        'session' => $session,
-        'server' => $server,
-        'file' => $file,
-        'path' => $path,
+        $this->session = $session;
+        $this->server = $server;
+        $this->panelDebug = array(
+        'session' => $this->session,
+        'server' => $this->server,
+        'file' => $this->file,
+        'path' => $this->path,
          );
     }
 
@@ -33,6 +33,6 @@
     public function dumpDebug()
     {
         var_dump($panelDebug);
-    }
+    }*/
  }
 ?>
