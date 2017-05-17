@@ -1,6 +1,3 @@
-<?php
-    
-    echo "
 
 <!DOCTYPE html>
 
@@ -23,10 +20,22 @@
 
 
 <body style='background-color: green; font-size:30px; margin: 20px;'>
-
+<h1>{{ hello }}</h1>
     <form action='/note/' method='post'>
-    <p>Hack your life     </p> <input type='submit' name='saveNote' value='Save' style='color: white; background-color: black '>
+    <p>{{ title }}</p> <input type='submit' name='saveNote' value='{{ desc }}' style='color: white; background-color: black '>
+    {{ for e in 5 }}
+        <p>hello everybody, m'y the for loop</p>
+    {{ endfor }}
+
+
+    {{ for e=10 in 15 }}
+        <p>hello everybody, {{ e }}m'y the for loop</p>
+    {{ endfor }}
+
     
+
+    
+
     <div class='row'>
       <div class='col-xs-12 col-md-8'>
          <input type='hidden' name='csrfmiddlewaretoken' value='OJjdppQ60qnfJjTQbSeq98dxhOPbt85qmrezs7u08K8KkMO8YsIlazzK4VwdrNec' />
@@ -52,7 +61,4 @@
 </html>
 
 
-    ";
-
-
-?>
+ 
